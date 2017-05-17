@@ -8,7 +8,20 @@ class Messages extends Controller
 {
     public function add()
 	{
+	  echo '<pre>';
+	  print_r($_GET);
+	  echo '</pre>';
+	   
+	  echo '<pre>';
+	  print_r($_POST);
+	  echo '</pre>';
+
+		if ($_POST != null) {
+		return 'This is post ADD';
+		}
+		else {
 		return 'This is ADD';
+		}
 	}
 
     public function del()
@@ -30,4 +43,5 @@ class Messages extends Controller
 	{
 		return 'This is ONE';
 	}
+	
 }

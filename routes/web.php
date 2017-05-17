@@ -31,4 +31,20 @@ Route::get('/all', 'Messages@all');
 
 Route::get('/one', 'Messages@one');
 
+Route::get('/login', 'Messages@login');
+
+Route::get('/logout', 'Messages@logout');
+
+
+Route::post('/add', 'Messages@add');
+
+Route::post('/del', 'Messages@del');
+
+Route::post('/edit', 'Messages@edit');
+
+Route::post('/all', 'Messages@all');
+
+Route::post('/one', 'Messages@one');
+
+Route::post('/login', 'Messages@login');
 
