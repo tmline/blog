@@ -176,6 +176,9 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
+        // зарегистрировали свой хелпер сервис провайдер
+        App\Providers\HelpersServiceProvider::class,
+        App\Providers\ComposerServiceProvider::class,
 
     ],
 

@@ -25,9 +25,9 @@ Route::get('/add', 'Messages@add');
 
 Route::get('/del', 'Messages@del');
 
-Route::get('/edit', 'Messages@edit');
-
 Route::get('/all', 'Messages@all');
+
+Route::get('/edit', 'Messages@all');
 
 Route::get('/one', 'Messages@one');
 

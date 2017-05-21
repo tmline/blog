@@ -17,31 +17,45 @@ class Messages extends Controller
 	  echo '</pre>';
 
 		if ($_POST != null) {
-		return 'This is post ADD';
+		return view('add', [
+			'title' => 'POST This is ADD page',
+		]);
 		}
 		else {
-		return 'This is ADD';
+		return view('add', [
+			'title' => 'GET This is ADD page',
+		]);
 		}
 	}
 
     public function del()
 	{
-		return 'This is DEL';
+		return view('del', [
+			'title' => 'This is DEL page',
+		]);
 	}
 
     public function edit()
 	{
-		return 'This is EDIT';
+		return view('edit', [
+			'title' => 'This is EDIT page',
+		]);
 	}
 
     public function all()
 	{
-		return 'This is ALL';
+		return view('second_all', [
+			'title' => 'This is ALL page',
+			'key1' => 'This is ALL1',
+			'key2' => 'This is ALL2'
+		]);
 	}
 
     public function one()
 	{
-		return 'This is ONE';
+		return view('one', [
+			'title' => 'This is ONE page',
+		]);
 	}
 	
 }

@@ -5,16 +5,21 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>just do it</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
+
+        <!-- favicon tml-->
+		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 
         <!-- Styles -->
         <style>
             html, body {
                 background-color: #fff;
-                color: #636b6f;
+                //color: #c7b39b;
+                //color: #636b6f;
+                color: #96bebe;
                 font-family: 'Raleway', sans-serif;
                 font-weight: 100;
                 height: 100vh;
@@ -62,6 +67,20 @@
             .m-b-md {
                 margin-bottom: 30px;
             }
+			
+			
+
+            .pic {
+				width:1023px;
+				height:70px;
+                background: url(pic/001.jpg) no-repeat;
+				margin-bottom:40px;
+            }
+
+            .txt {
+				font-size:20px;
+                color: #c7b39b;
+           }
         </style>
     </head>
     <body>
@@ -78,9 +97,13 @@
             @endif
 
             <div class="content">
-                <div class="title m-b-md">
-                    Laravel hw_02
+                <div class="pic">
                 </div>
+                <div class="title m-b-md">
+                    Laravel hw_03<br>
+				Main TMPL
+                </div>
+
 
                 <div class="links">
                     <a href="https://laravel.com/docs">Documentation</a>
@@ -89,7 +112,14 @@
                     <a href="https://forge.laravel.com">Forge</a>
                     <a href="https://github.com/laravel/laravel">GitHub</a>
                 </div>
-            </div>
+
+                <div class="links">
+					<p class="txt">
+				{{ formatDate() }}
+					</p>
+                </div>
+
+				</div>
         </div>
     </body>
 </html>
