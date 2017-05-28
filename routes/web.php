@@ -142,3 +142,7 @@ Route::post('/one', 'Messages@one');
 
 Route::post('/login', 'Messages@login');
 
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

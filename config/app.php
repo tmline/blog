@@ -77,7 +77,7 @@ return [
     |
     */
 
-    'locale' => 'en',
+    'locale' => 'ru',
 
     /*
     |--------------------------------------------------------------------------
@@ -179,6 +179,7 @@ return [
         // зарегистрировали свой хелпер сервис провайдер
         App\Providers\HelpersServiceProvider::class,
         App\Providers\ComposerServiceProvider::class,
+		Barryvdh\Debugbar\ServiceProvider::class,
 
     ],
 
