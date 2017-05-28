@@ -32,7 +32,7 @@
                     @if (Auth::check())
                         <li class="login">
                             Вошли как {{ Auth::user()->name }}<a href="{{ route('site.auth.logout') }}">Выход</a>
-                        </li>
+						</li>
                     @else
                         <li class="login">
                             <a href="{{ route('site.auth.login') }}" class="dropdown-toggle" data-toggle="dropdown">Вход</a>

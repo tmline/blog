@@ -128,9 +128,9 @@ Route::get('/edit', 'Messages@all');
 
 Route::get('/one', 'Messages@one');
 
-Route::get('/login', 'Messages@login');
+// Route::get('/login', 'Messages@login');
 
-Route::get('/logout', 'Messages@logout');
+// Route::get('/logout', 'Messages@logout');
 
 
 Route::post('/add', 'Messages@add');
@@ -143,7 +143,7 @@ Route::post('/all', 'Messages@all');
 
 Route::post('/one', 'Messages@one');
 
-Route::post('/login', 'Messages@login');
+// Route::post('/login', 'Messages@login');
 
 
 Auth::routes();
