@@ -3,7 +3,7 @@
         <div class="row">
             <div class="col-xs-12 col-sm-6">
                 <div class="copyrights--right">
-                    Dmitrii Iurev © Copyright 2016 - {{ date('Y') }}.
+                    PHP-Maker © Copyright {{ date('Y') }}.
                 </div>
             </div>
         </div>
