@@ -19,8 +19,8 @@
                     <li class="main">
                         <a href="{{ route('site.main.index') }}" class="dropdown-toggle" data-toggle="dropdown">Главная</a>
                     </li>
-                    <li class="post">
-                        <a href="{{ route('site.main.index') }}" class="dropdown-toggle" data-toggle="dropdown">Новости</a>
+                    <li class="news">
+                        <a href="{{ route('site.main.news') }}" class="dropdown-toggle" data-toggle="dropdown">Новости</a>
                     </li>
                     <li class="about">
                         <a href="{{ route('site.main.about') }}" class="dropdown-toggle" data-toggle="dropdown">Кто я?</a>

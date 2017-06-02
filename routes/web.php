@@ -25,6 +25,11 @@ Route::get('/post/{id}.html', 'PostController@post')
     ->name('site.posts.post')
     ->where('id', '[\d]+');
 
+/*** TML News ***/
+
+Route::get('/news.html', 'MainController@news')
+    ->name('site.main.news');
+	
 
 /**
  * Routes for register and login

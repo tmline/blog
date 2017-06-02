@@ -49,4 +49,23 @@ class MainController extends Controller
         ]);
     }
 
+// TML News
+	
+    public function news()
+    {
+        $posts = [];
+
+        return view('layouts.primary', [
+            'page' => 'pages.news',
+            'title' => 'Новости',
+            'content' => '<p>Привет, меня зовут Новости!</p>',
+            'image' => [
+                'path' => 'assets/images/tanday10.jpg',
+                'alt' => 'Image'
+            ],
+            'activeMenu' => 'news',
+			'posts' => $posts
+        ]);
+    }
+	
 }
