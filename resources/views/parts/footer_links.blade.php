@@ -6,8 +6,8 @@
                 <hr>
                 <div class="social-icons  widget-social-icons">
                     <a href="https://vk.com/netarea" class="social-icons__container"> <span class="zocial-vk"></span> </a>
-                    <a href="#" class="social-icons__container"> <span class="zocial-instagram"></span> </a>
-                    <a href="#" class="social-icons__container"> <span class="zocial-twitter"></span> </a>
+                    <a href="https://www.instagram.com/tourmalinepro/" class="social-icons__container"> <span class="zocial-instagram"></span> </a>
+                    <a href="https://twitter.com/TourmalinePro" class="social-icons__container"> <span class="zocial-twitter"></span> </a>
                 </div>
             </nav>
         </div>
@@ -36,7 +36,11 @@
 					E-mail: netarea@mail.ru
                     <br>
 					Skype: tourmaline.pro
+                    <br>
+					<span class="glyphicon  glyphicon-phone"></span>&nbsp;&nbsp;Viber, WhatsApp: +7 988 245 22 75
                     </span>
+					
+					
             </div>
         </div>
     </div>

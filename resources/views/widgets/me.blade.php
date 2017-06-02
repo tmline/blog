@@ -9,7 +9,7 @@
         <div class="col-xs-10  col-xs-offset-1">
             <h4>Татьяна Красикова</h4>
             <p>PHP разработчик, иллюстратор, <br>дизайнер-график</p>
-            <p>+7 988 245 22 75</p>
+            <p>					<span class="glyphicon  glyphicon-phone"></span>&nbsp;&nbsp;Viber, WhatsApp: <br>+7 988 245 22 75</p>
         </div>
     </div>
 </div>
