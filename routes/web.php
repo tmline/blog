@@ -30,6 +30,9 @@ Route::get('/post/{id}.html', 'PostController@post')
 Route::get('/news.html', 'MainController@news')
     ->name('site.main.news');
 	
+Route::get('/articles.html', 'MainController@articles')
+    ->name('site.main.articles');
+	
 
 /**
  * Routes for register and login

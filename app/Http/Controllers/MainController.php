@@ -68,4 +68,21 @@ class MainController extends Controller
         ]);
     }
 	
+    public function articles()
+    {
+        $posts = [];
+
+        return view('layouts.primary', [
+            'page' => 'pages.articles',
+            'title' => 'Статьи',
+            'content' => '<p>Привет, меня зовут Статьи!</p>',
+            'image' => [
+                'path' => 'assets/images/tanday10.jpg',
+                'alt' => 'Image'
+            ],
+            'activeMenu' => 'articles',
+			'posts' => $posts
+        ]);
+    }
+	
 }

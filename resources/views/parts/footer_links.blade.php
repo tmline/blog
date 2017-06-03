@@ -18,8 +18,8 @@
                 <hr>
                 <ul class="navigation">
                     <li> <a href="{{ route('site.main.index') }}">Главная</a> </li>
-                    <li> <a href="post.html">Новости</a> </li>
-                    <li> <a href="elements.html">Статьи</a> </li>
+                    <li> <a href="{{ route('site.main.news') }}">Новости</a> </li>
+                    <li> <a href="{{ route('site.main.articles') }}">Статьи</a> </li>
                     <li> <a href="about.html">Обо мне</a> </li>
                     <li> <a href="feedback.html">Обратная связь</a> </li>
                 </ul>

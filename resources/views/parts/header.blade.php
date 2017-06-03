@@ -22,6 +22,9 @@
                     <li class="news">
                         <a href="{{ route('site.main.news') }}" class="dropdown-toggle" data-toggle="dropdown">Новости</a>
                     </li>
+                    <li class="articles">
+                        <a href="{{ route('site.main.articles') }}" class="dropdown-toggle" data-toggle="dropdown">Статьи</a>
+                    </li>
                     <li class="about">
                         <a href="{{ route('site.main.about') }}" class="dropdown-toggle" data-toggle="dropdown">Кто я?</a>
                     </li>
@@ -34,7 +37,7 @@
 
                     @if (Auth::check())
                         <li class="login">
-                            Вошли как {{ Auth::user()->name }}<a href="{{ route('site.auth.logout') }}">Выход</a>
+                            Вы вошли как <b>{{ Auth::user()->name }}</b><a href="{{ route('site.auth.logout') }}">Выход</a>
 						</li>
                     @else
                         <li class="login">
