@@ -1741,7 +1741,8 @@ output {
 }
 
 textarea.form-control {
-    height: auto
+    height: auto;
+	margin-top: 10px
 }
 
 .form-group {

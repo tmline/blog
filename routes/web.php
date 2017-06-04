@@ -25,7 +25,7 @@ Route::get('/post/{id}.html', 'PostController@post')
     ->name('site.posts.post')
     ->where('id', '[\d]+');
 
-/*** TML News ***/
+/*** TML News, Articles, Article, add get add post ***/
 
 Route::get('/news.html', 'MainController@news')
     ->name('site.main.news');
@@ -33,6 +33,16 @@ Route::get('/news.html', 'MainController@news')
 Route::get('/articles.html', 'MainController@articles')
     ->name('site.main.articles');
 	
+Route::get('/article.html', 'MainController@article')
+    ->name('site.articles.article')
+    ->where('id', '[\d]+');
+
+Route::get('/add_article.html', 'MainController@add_article')
+    ->name('site.articles.add');
+
+Route::post('/add_article.html', 'MainController@add_articlePost')
+    ->name('site.articles.addPost');
+
 
 /**
  * Routes for register and login
@@ -124,32 +134,7 @@ Route::get('/view/page1', 'ViewController@page1');
 Route::get('/messages', function () {
 	return 'This is ADD';
 });*/
-// tml
 
-Route::get('/add', 'Messages@add');
-
-Route::get('/del', 'Messages@del');
-
-Route::get('/all', 'Messages@all');
-
-Route::get('/edit', 'Messages@all');
-
-Route::get('/one', 'Messages@one');
-
-// Route::get('/login', 'Messages@login');
-
-// Route::get('/logout', 'Messages@logout');
-
-
-Route::post('/add', 'Messages@add');
-
-Route::post('/del', 'Messages@del');
-
-Route::post('/edit', 'Messages@edit');
-
-Route::post('/all', 'Messages@all');
-
-Route::post('/one', 'Messages@one');
 
 // Route::post('/login', 'Messages@login');
 

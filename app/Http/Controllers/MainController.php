@@ -1,7 +1,9 @@
 <?php namespace App\Http\Controllers;
-
+use Carbon\Carbon;
+use Illuminate\Http\Request;
 use App\Models\Post;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class MainController extends Controller
 {
@@ -68,20 +70,71 @@ class MainController extends Controller
         ]);
     }
 	
+// TML Articles
+	
     public function articles()
     {
-        $posts = [];
+        $posts = DB::table('articles_table')->get();
 
+		debug(  $posts);
+		
         return view('layouts.primary', [
             'page' => 'pages.articles',
             'title' => 'Статьи',
-            'content' => '<p>Привет, меня зовут Статьи!</p>',
             'image' => [
-                'path' => 'assets/images/tanday10.jpg',
-                'alt' => 'Image'
             ],
             'activeMenu' => 'articles',
 			'posts' => $posts
+        ]);
+    }
+	
+// TML Article
+
+    public function article()
+    {
+        $posts = DB::table('articles_table')->get();
+
+		debug(  $posts);
+		
+        return view('layouts.primary', [
+            'page' => 'pages.articles',
+            'title' => 'Статьи',
+            'image' => [
+            ],
+            'activeMenu' => 'articles',
+			'posts' => $posts
+        ]);
+    }
+	
+    public function add_article()
+    {
+		
+        return view('layouts.primary', [
+            'page' => 'pages.add_article',
+            'title' => 'Добавление статьи',
+            'image' => [
+            ],
+            'activeMenu' => 'articles',
+
+        ]);
+    }
+	
+	
+    public function add_articlePost(Request $request)
+    {
+debug($request);
+
+		DB::table('articles_table')->insert(
+			['name' => $request -> input('name'), 'author' =>  $request -> input('author'), 'notes' => $request -> input('notes'),]
+		);
+		
+        return view('layouts.primary', [
+            'page' => 'pages.add_article',
+            'title' => 'Добавление статьи',
+            'image' => [
+            ],
+            'activeMenu' => 'articles',
+
         ]);
     }
 	
