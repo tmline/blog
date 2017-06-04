@@ -13,19 +13,19 @@ debug($errors->get('name'));
                 <div class="form-group">
                     <label for="inputEmail3" class="col-sm-3 control-label">Автор</label>
 						<div class="col-sm-9">
-							<input type="text" class="form-control" id="inputEmail3" name="author" placeholder="Ivan Ivanov">
+							<input type="text" class="form-control" id="inputEmail3" name="author" placeholder="Имя Фамилия Отчество" required>
 							<ul class="ul_tml">
 								@foreach ($errors->get('name') as $error)
 									<li>{{ $error }}</li>
 								@endforeach
 							</ul>
-							<input type="text" class="form-control" id="inputEmail3" name="name" placeholder="Название статьи">
+							<input type="text" class="form-control" id="inputEmail3" name="name" placeholder="Название статьи" required>
 							<ul class="ul_tml">
 								@foreach ($errors->get('name') as $error)
 									<li>{{ $error }}</li>
 								@endforeach
 							</ul>
-							<textarea class="form-control"  name="notes" placeholder="Текст статьи"></textarea>
+							<textarea class="form-control"  name="notes" placeholder="Текст статьи" required></textarea>
 							
 							<ul class="ul_tml">
 								@foreach ($errors->get('articletext') as $error)

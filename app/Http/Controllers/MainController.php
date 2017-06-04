@@ -1,7 +1,13 @@
 <?php namespace App\Http\Controllers;
+
+use App\Paper;
+
 use Carbon\Carbon;
+
 use Illuminate\Http\Request;
+
 use App\Models\Post;
+
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 
@@ -120,13 +126,43 @@ class MainController extends Controller
     }
 	
 	
+//    public function add_articlePost(Request $request)
+//    {
+//	debug($request);
+
+//		DB::table('articles_table')->insert(
+//			['name' => $request -> input('name'), 'author' =>  $request -> input('author'), 'notes' => $request -> input('notes'),]
+//		);
+		
+//        return view('layouts.primary', [
+//            'page' => 'pages.add_article',
+//            'title' => 'Добавление статьи',
+//            'image' => [
+//            ],
+//            'activeMenu' => 'articles',
+
+//        ]);
+//    }
+
+	
     public function add_articlePost(Request $request)
     {
 debug($request);
 
-		DB::table('articles_table')->insert(
-			['name' => $request -> input('name'), 'author' =>  $request -> input('author'), 'notes' => $request -> input('notes'),]
-		);
+//		DB::table('articles_table')->insert(
+//			['name' => $request -> input('name'), 'author' =>  $request -> input('author'), 'notes' => $request -> input('notes'),]
+//		);
+
+        $paper = new Paper;
+
+        $paper->name = $request->name;
+
+        $paper->author = $request->author;
+
+        $paper->notes = $request->notes;
+
+        $paper->save();
+		
 		
         return view('layouts.primary', [
             'page' => 'pages.add_article',
