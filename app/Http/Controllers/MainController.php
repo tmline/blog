@@ -80,9 +80,14 @@ class MainController extends Controller
 	
     public function articles()
     {
-        $posts = DB::table('articles_table')->get();
+//        tml QB
+//        $posts = DB::table('papers')->get();
 
-		debug(  $posts);
+//        tml ORM
+
+        $posts = Paper::all();
+
+//		debug(  $posts);
 		
         return view('layouts.primary', [
             'page' => 'pages.articles',
@@ -96,19 +101,21 @@ class MainController extends Controller
 	
 // TML Article
 
-    public function article()
+    public function article(Request $request)
     {
-        $posts = DB::table('articles_table')->get();
+        $post = Paper::find($request->id);
 
-		debug(  $posts);
+		debug ($post);
+//		echo $post;
+//		die;
 		
         return view('layouts.primary', [
-            'page' => 'pages.articles',
+            'page' => 'pages.article',
             'title' => 'Статьи',
             'image' => [
             ],
             'activeMenu' => 'articles',
-			'posts' => $posts
+			'post' => $post
         ]);
     }
 	
@@ -162,6 +169,17 @@ debug($request);
         $paper->notes = $request->notes;
 
         $paper->save();
+
+
+
+        $this->validate($request, [
+            'name' => 'required|max:255',
+            'email' => 'required|email|unique:users|max:255',
+            'password' => 'required|max:255|min:6',
+            'password2' => 'required|same:password',
+            'phone' => 'required|regex:/\+\d{1}\s{1}\(\d{3}\)\s{1}\d{3}\-\d{2}\-\d{2}/',
+            'is_confirmed' => 'accepted'
+        ]);
 		
 		
         return view('layouts.primary', [

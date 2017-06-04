@@ -9,9 +9,7 @@
     <div class="row">
         <div class="col-xs-10  col-xs-offset-1">
             <div class="post-content--front-page">
-                <h2 class="front-page-title">
-                    <a href="{{ route('site.articles.article', ['id' => $post->id]) }}">{{ $post->name }}</a>
-                </h2>
+                <h2 class="front-page-title">{{ $post->name }}</h2>
                 @if ($post->author)
                     <h3>{{ $post->author }}</h3>
                 @endif
