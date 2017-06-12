@@ -1,6 +1,8 @@
 <?php namespace App\Http\Controllers;
 
 use App\Paper;
+use App\Breeze;
+use App\Fan;
 
 use Carbon\Carbon;
 
@@ -40,7 +42,7 @@ class MainController extends Controller
             'title' => 'Обо мне',
             'content' => '<p>Привет, меня зовут Татьяна Красикова и я — веб-разработчик!</p>',
             'image' => [
-                'path' => 'assets/images/tanday10.jpg',
+                'path' => 'assets/images/tanday10_.jpg',
                 'alt' => 'Image'
             ],
             'activeMenu' => 'about',
@@ -57,12 +59,50 @@ class MainController extends Controller
         ]);
     }
 
+// TML Fans (Posts)
+	
+    public function fans()
+    {
+
+        $posts = Fan::all();
+        return view('layouts.primary', [
+            'page' => 'pages.fans',
+            'title' => 'Посты',
+            'content' => '<p>Привет, меня зовут Новости!</p>',
+            'image' => [
+                'path' => 'assets/images/tanday10.jpg',
+                'alt' => 'Image'
+            ],
+            'activeMenu' => 'posts',
+			'posts' => $posts
+        ]);
+    }
+
+// TML Fan (Post)
+
+    public function fan(Request $request)
+    {
+
+        $post = Fan::find($request->id);
+        return view('layouts.primary', [
+            'page' => 'pages.fan',
+            'title' => 'Новости',
+            'content' => '<p>Привет, меня зовут Новости!</p>',
+            'image' => [
+                'path' => 'assets/images/tanday10.jpg',
+                'alt' => 'Image'
+            ],
+            'activeMenu' => 'posts',
+			'post' => $post
+        ]);
+    }
+	
 // TML News
 	
     public function news()
     {
-        $posts = [];
 
+        $posts = Breeze::all();
         return view('layouts.primary', [
             'page' => 'pages.news',
             'title' => 'Новости',
@@ -73,6 +113,25 @@ class MainController extends Controller
             ],
             'activeMenu' => 'news',
 			'posts' => $posts
+        ]);
+    }
+
+// TML Breeze (New)
+
+    public function breeze(Request $request)
+    {
+
+        $post = Breeze::find($request->id);
+        return view('layouts.primary', [
+            'page' => 'pages.new',
+            'title' => 'Новости',
+            'content' => '<p>Привет, меня зовут Новости!</p>',
+            'image' => [
+                'path' => 'assets/images/tanday10.jpg',
+                'alt' => 'Image'
+            ],
+            'activeMenu' => 'news',
+			'post' => $post
         ]);
     }
 	
@@ -93,6 +152,8 @@ class MainController extends Controller
             'page' => 'pages.articles',
             'title' => 'Статьи',
             'image' => [
+                'path' => 'assets/images/tanday10.jpg',
+                'alt' => 'Image'
             ],
             'activeMenu' => 'articles',
 			'posts' => $posts

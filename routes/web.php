@@ -25,10 +25,23 @@ Route::get('/post/{id}.html', 'PostController@post')
     ->name('site.posts.post')
     ->where('id', '[\d]+');
 
-/*** TML News, Articles, Article, add get add post ***/
+/*** TML News, New, Posts, Post, Articles, Article, add get add post ***/
 
+Route::get('/fans.html', 'MainController@fans')
+    ->name('site.main.fans');
+	
+Route::get('/fan.html', 'MainController@fan')
+    ->name('site.fans.fan')
+    ->where('id', '[\d]+');	
+	
+	
 Route::get('/news.html', 'MainController@news')
     ->name('site.main.news');
+	
+Route::get('/new.html', 'MainController@breeze')
+    ->name('site.news.new')
+    ->where('id', '[\d]+');	
+	
 	
 Route::get('/articles.html', 'MainController@articles')
     ->name('site.main.articles');
@@ -36,6 +49,7 @@ Route::get('/articles.html', 'MainController@articles')
 Route::get('/article.html', 'MainController@article')
     ->name('site.articles.article')
     ->where('id', '[\d]+');
+	
 
 Route::get('/add_article.html', 'MainController@add_article')
     ->name('site.articles.add');

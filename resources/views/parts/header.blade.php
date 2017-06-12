@@ -16,28 +16,39 @@
         <nav class="navbar navbar-default" role="navigation">
             <div class="collapse navbar-collapse" id="readable-navbar-collapse">
                 <ul class="navigation">
-                    <li class="main">
+
+					<li class="main">
                         <a href="{{ route('site.main.index') }}" class="dropdown-toggle" data-toggle="dropdown">Главная</a>
                     </li>
-                    <li class="news">
+                    
+                    
+					<li class="posts">
+                        <a href="{{ route('site.main.fans') }}" class="dropdown-toggle" data-toggle="dropdown">Посты</a>
+                    </li>
+                    
+					<li class="news">
                         <a href="{{ route('site.main.news') }}" class="dropdown-toggle" data-toggle="dropdown">Новости</a>
                     </li>
-                    <li class="articles">
+                    
+					<li class="articles">
                         <a href="{{ route('site.main.articles') }}" class="dropdown-toggle" data-toggle="dropdown">Статьи</a>
                     </li>
-                    <li class="about">
+                    
+					<li class="about">
                         <a href="{{ route('site.main.about') }}" class="dropdown-toggle" data-toggle="dropdown">Кто я?</a>
                     </li>
-                    <li class="feedback">
+                    
+					<li class="feedback">
                         <a href="{{ route('site.main.feedback') }}" class="dropdown-toggle" data-toggle="dropdown">Написать мне</a>
                     </li>
-                    <li class="register">
+                    
+					<li class="register">
                         <a href="{{ route('site.auth.register') }}" class="dropdown-toggle" data-toggle="dropdown">Регистрация</a>
                     </li>
 
                     @if (Auth::check())
                         <li class="login">
-                            Вы вошли как <b>{{ Auth::user()->name }}</b><a href="{{ route('site.auth.logout') }}">Выход</a>
+                            Привет, <b>{{ Auth::user()->name }}</b>!<a href="{{ route('site.auth.logout') }}">Выход</a>
 						</li>
                     @else
                         <li class="login">
